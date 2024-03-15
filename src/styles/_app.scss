@@ -1,5 +1,10 @@
+@use "../styles/abstracts/variables/colors";
 .app-wrapper {
   text-align: center;
-  background-color: rgb(85, 79, 79);
+  background-color: colors.$opacity-black;
+  color: colors.$white;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
