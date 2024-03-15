@@ -1,10 +1,30 @@
 @use "../styles/abstracts/variables/colors";
 .app-wrapper {
   text-align: center;
-  background-color: colors.$opacity-black;
-  color: colors.$white;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.orange {
+  color: colors.$orange;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.disabled {
+  color: colors.$grayish-blue;
+}
+
+.btn {
+  margin: 1em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  border: none;
+  width: 100%;
+  background-color: colors.$orange;
+  color: colors.$white;
 }
