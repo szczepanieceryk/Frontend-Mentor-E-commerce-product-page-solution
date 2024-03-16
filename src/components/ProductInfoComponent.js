@@ -33,7 +33,7 @@ const ProductInfoComponent = () => {
           <span className="items-numer-counter">0</span>
           <img src={plusIcon} alt="" />
         </div>
-        <ButtonComponent text="Add to cart" bgColor="bgOrange" />
+        <ButtonComponent text="Add to cart" styleProps="bgOrange cart" />
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
-const ButtonComponent = ({ text, bgColor }) => {
+const ButtonComponent = ({ text, styleProps }) => {
   return (
-    <>
-      <button className={`btn bold ${bgColor}`}>{text}</button>
-    </>
+    <div className="button-component-wrapper">
+      <button className={`btn bold ${styleProps}`}>{text}</button>
+    </div>
   );
 };
 

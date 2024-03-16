@@ -7,4 +7,12 @@
   width: 100%;
   color: colors.$white;
   cursor: pointer;
+  transition: 0.5s;
+  opacity: 1;
+  &:hover {
+    opacity: 0.6;
+  }
+  //   &.cart {
+  //     box-shadow: 2px 10px 2px 2px colors.$orange;
+  //   }
 }
