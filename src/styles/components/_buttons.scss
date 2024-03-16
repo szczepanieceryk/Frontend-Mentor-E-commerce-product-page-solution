@@ -1,0 +1,10 @@
+@use "../../styles/abstracts/variables/colors";
+.btn {
+  margin: 1em auto;
+  padding: 1.5em;
+  border-radius: 1em;
+  border: none;
+  width: 100%;
+  color: colors.$white;
+  cursor: pointer;
+}

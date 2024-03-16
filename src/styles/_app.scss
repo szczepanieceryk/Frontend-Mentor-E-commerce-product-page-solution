@@ -11,20 +11,14 @@
   color: colors.$orange;
 }
 
+.bgOrange {
+  background-color: colors.$orange;
+}
+
 .bold {
   font-weight: bold;
 }
 
 .disabled {
   color: colors.$grayish-blue;
-}
-
-.btn {
-  margin: 1em auto;
-  padding: 1.5em;
-  border-radius: 1em;
-  border: none;
-  width: 100%;
-  background-color: colors.$orange;
-  color: colors.$white;
 }

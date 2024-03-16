@@ -1,6 +1,8 @@
-import "../styles/_productInfoComponent.scss";
+import "../styles/components/_productInfoComponent.scss";
+import "../styles/components/_buttons.scss";
 import minusIcon from "../images/icon-minus.svg";
 import plusIcon from "../images/icon-plus.svg";
+import ButtonComponent from "./ButtonComponent";
 
 const ProductInfoComponent = () => {
   return (
@@ -31,7 +33,7 @@ const ProductInfoComponent = () => {
           <span className="items-numer-counter">0</span>
           <img src={plusIcon} alt="" />
         </div>
-        <button className="btn bold">Add to cart</button>
+        <ButtonComponent text="Add to cart" bgColor="bgOrange" />
       </div>
     </div>
   );
