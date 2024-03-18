@@ -22,13 +22,13 @@ const ProductInfoComponent = ({
       <div className="product-price-wrapper">
         <div className="price-left">
           <span className="product-price bold">
-            <strong>${price}</strong>
+            <strong>${(price * (discount / 100)).toFixed(2)}</strong>
           </span>
           <div className="discount-bgc">
             <span className="price-discount orange bold">{discount}%</span>
           </div>
         </div>
-        <span className="discounted-price bold disabled">$250.0</span>
+        <span className="discounted-price bold disabled">${price}</span>
       </div>
 
       <div className="add-to-cart-wrapper">
