@@ -19,7 +19,9 @@ const ProductInfoComponent = () => {
 
       <div className="product-price-wrapper">
         <div className="price-left">
-          <span className="product-price bold">$125.00</span>
+          <span className="product-price bold">
+            <strong>$125.00</strong>
+          </span>
           <div className="discount-bgc">
             <span className="price-discount orange bold">50%</span>
           </div>
@@ -29,9 +31,9 @@ const ProductInfoComponent = () => {
 
       <div className="add-to-cart-wrapper">
         <div className="counter-wrapper">
-          <img src={minusIcon} alt="" />
+          <img className="caunter-manipulators" src={minusIcon} alt="" />
           <span className="items-numer-counter">0</span>
-          <img src={plusIcon} alt="" />
+          <img className="caunter-manipulators" src={plusIcon} alt="" />
         </div>
         <ButtonComponent text="Add to cart" styleProps="bgOrange cart" />
       </div>

@@ -1,4 +1,5 @@
 @use "../../styles/abstracts/variables/colors";
+@use "../../styles/abstracts/variables/brakepoints";
 
 .product-info-component-wrapper {
   padding: 1.5em 1.5em 3em;
@@ -35,6 +36,19 @@
     }
   }
   .add-to-cart-wrapper {
+    @media screen and (min-width: brakepoints.$tablet-brakepoint) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: 1em;
+      .counter-wrapper {
+        flex-grow: 1;
+      }
+      .button-component-wrapper {
+        flex-grow: 2;
+      }
+    }
     .counter-wrapper {
       margin: 1em 0;
       padding: 1.5em;
@@ -43,6 +57,9 @@
       justify-content: space-between;
       align-items: center;
       background-color: colors.$light-grayish-blue;
+      .caunter-manipulators {
+        cursor: pointer;
+      }
     }
   }
 }
