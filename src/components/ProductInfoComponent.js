@@ -4,26 +4,28 @@ import minusIcon from "../images/icon-minus.svg";
 import plusIcon from "../images/icon-plus.svg";
 import ButtonComponent from "./ButtonComponent";
 
-const ProductInfoComponent = () => {
+const ProductInfoComponent = ({
+  companyName,
+  productName,
+  description,
+  price,
+  discount,
+}) => {
   return (
     <div className="product-info-component-wrapper">
       <div className="product-info-wrapper">
-        <span className="company-name orange bold">Sneaker Company</span>
-        <h1 className="product-name bold">Fall Limited Edition Sneakers</h1>
-        <p className="product-description bold">
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, they’ll withstand everything
-          the weather can offer.
-        </p>
+        <span className="company-name orange bold">{companyName}</span>
+        <h1 className="product-name bold">{productName}</h1>
+        <p className="product-description bold">{description}</p>
       </div>
 
       <div className="product-price-wrapper">
         <div className="price-left">
           <span className="product-price bold">
-            <strong>$125.00</strong>
+            <strong>${price}</strong>
           </span>
           <div className="discount-bgc">
-            <span className="price-discount orange bold">50%</span>
+            <span className="price-discount orange bold">{discount}%</span>
           </div>
         </div>
         <span className="discounted-price bold disabled">$250.0</span>
