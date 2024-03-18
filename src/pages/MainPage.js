@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ProductInfoComponent from "../components/ProductInfoComponent";
 
 const MainPage = ({
@@ -7,6 +8,7 @@ const MainPage = ({
   price,
   discount,
 }) => {
+  const [cartProductQuantity, setCartProductQuantity] = useState(1);
   return (
     <div className="main-page-wrapper">
       <ProductInfoComponent
@@ -15,6 +17,8 @@ const MainPage = ({
         description={description}
         price={price}
         discount={discount}
+        cartProductQuantity={cartProductQuantity}
+        setCartProductQuantity={setCartProductQuantity}
       />
     </div>
   );

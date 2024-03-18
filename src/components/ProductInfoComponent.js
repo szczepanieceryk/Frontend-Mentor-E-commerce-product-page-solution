@@ -10,7 +10,18 @@ const ProductInfoComponent = ({
   description,
   price,
   discount,
+  cartProductQuantity,
+  setCartProductQuantity,
 }) => {
+  const updateCartProductQuantity = (event) => {
+    const action = event.currentTarget.alt;
+    if (action === "increase cart product quantity") {
+      setCartProductQuantity((prevQuantity) => prevQuantity + 1);
+    } else if (action === "reduce cart product quantity") {
+      setCartProductQuantity((prevQuantity) => Math.max(prevQuantity - 1, 0));
+    }
+  };
+
   return (
     <div className="product-info-component-wrapper">
       <div className="product-info-wrapper">
@@ -33,9 +44,19 @@ const ProductInfoComponent = ({
 
       <div className="add-to-cart-wrapper">
         <div className="counter-wrapper">
-          <img className="caunter-manipulators" src={minusIcon} alt="" />
-          <span className="items-numer-counter">0</span>
-          <img className="caunter-manipulators" src={plusIcon} alt="" />
+          <img
+            className="caunter-manipulators"
+            src={minusIcon}
+            alt="reduce cart product quantity"
+            onClick={updateCartProductQuantity}
+          />
+          <span className="items-numer-counter">{cartProductQuantity}</span>
+          <img
+            className="caunter-manipulators"
+            src={plusIcon}
+            alt="increase cart product quantity"
+            onClick={updateCartProductQuantity}
+          />
         </div>
         <ButtonComponent text="Add to cart" styleProps="bgOrange cart" />
       </div>
