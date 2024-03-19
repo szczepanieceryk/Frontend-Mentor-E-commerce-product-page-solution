@@ -2,6 +2,7 @@ import "../styles/components/_productInfoComponent.scss";
 import "../styles/components/_buttons.scss";
 import minusIcon from "../images/icon-minus.svg";
 import plusIcon from "../images/icon-plus.svg";
+import cartIcon from "../images/icon-cart.svg";
 import ButtonComponent from "./ButtonComponent";
 
 const ProductInfoComponent = ({
@@ -58,7 +59,11 @@ const ProductInfoComponent = ({
             onClick={updateCartProductQuantity}
           />
         </div>
-        <ButtonComponent text="Add to cart" styleProps="bgOrange cart" />
+        <ButtonComponent
+          text="Add to cart"
+          styleProps="bgOrange cart"
+          btnIcon={cartIcon}
+        />
       </div>
     </div>
   );
